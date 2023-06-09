@@ -1,0 +1,68 @@
+{
+  "name": "WHATS-KRIZ-AI",
+  "description": "whatsapp md chatgpt made by kriz ser",
+  "keywords": ["nodejs", "bot", "whatsapp chatgpt", "whatsapp automation", "multi device"],
+  "stack": "container",
+	"env": { 
+    "SESSION_ID": {
+            "description": "Please enter SESSION ID.",
+            "required": true
+        },
+    "MENU_MEDIA": {
+      "description": "Add url for menu image/video.",
+      "required": false,
+      "value": "https://i.imgur.com/9WOLsb9.png"
+    },
+    "BCAUDIO_IMAGE": {
+      "description": "Add url for audio bc image.",
+      "required": false,
+      "value": "https://i.imgur.com/EZtwkeA.jpeg"
+    },
+    "STICKER_DATA": {
+      "description": "Add sticker data.",
+      "required": false,
+      "value": "WHATS-KRIZ-AI,TEAM-TOXIC"
+    },
+    "OWNER_NUMBER": {
+      "description": "Add owner number.",
+      "required": false,
+      "value": "919633687665,919496966726"
+    },
+    "FOOTER": {
+      "description": "Add your footer name here.",
+      "required:" false,
+      "value": "WʜᴀᴛꜱKʀɪᴢ Aɪ"
+    },
+    "OWNERNAME": {
+      "description": "Add owner name.",
+      "required": false,
+      "value": "KRIZ-SER"
+    },
+    "BOTNAME": {
+      "description": "Add bot name.",
+      "required": false,
+      "value": "WHATS-KRIZ-AI"
+    },
+    "OPENAI_API_KEY": {
+      "description": "Add a api key from https://beta.openai.com/account/api-keys then paste it here.",
+      "required": false,
+      "value": "here"
+    },
+    "HEROKU_APP_NAME": {
+            "description": "Heroku App name to manage the worker (you canot use restart if u dont fill thsi and HEROKU_API)",
+            "required": true
+        },
+    "HEROKU_API_KEY": {
+            "description": "Heroku API key for managing the worker (You canot use restart if u dont fill thsi and APP_NAME)",
+            "required": true
+        }
+},
+   "addons": [
+		{
+			"plan": "heroku-postgresql:basic"
+		}
+	],
+	"formation": {
+		"worker": { "quantity": 1, "size": "standard-2x" }
+	}
+}
